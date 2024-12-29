@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+<link rel="shortcut icon" href="./src//assets/tic-tac-toe-icon.png" type="image/x-png">
+    <title>Tic tac toe</title>
+  </head>
+  <body>
+    <h1>Tic tac toe</h1>
+    <header>
+      <div>
+        <button id="muteBtn" class="sound-on">
+          <img class="sound-img" src="./src/assets/music-note.svg" alt="sound on" />
+        </button>
+      </div>
+
+      <p id="liveFeedback"></p>
+    </header>
+
+    <div class="form-container">
+      <form class="name-form">
+        <div>
+          <label for="playerOne">Player one</label>
+          <br />
+          <input
+            type="text"
+            id="playerOne"
+            minlength="3"
+            required
+            placeholder="Enter name"
+          />
+        </div>
+
+        <div>
+          <label for="playerTwo">Player two</label>
+          <br />
+          <input
+            type="text"
+            id="playerTwo"
+            minlength="3"
+            required
+            placeholder="Enter name"
+          />
+        </div>
+        <div>
+          <button id="submitBtn" type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="game-board">
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+    </div>
+
+    <div class="result-container hidden">
+      <div class="game-over-box">
+        <img
+          class="game-over-gif"
+          src="./src/assets/game-over-gif.gif"
+          alt="bunny waiting"
+        />
+        <p class="game-over">GAME OVER</p>
+      </div>
+
+      <div class="result-msgs">
+        <p id="winMatch"></p>
+        <p id="loseMatch"></p>
+      </div>
+
+      <div class="result-btns">
+        <button id="resetGameBtn">Restart</button>
+        <button id="playAgainGameBtn">Play again</button>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js" defer></script>
+  </body>
+</html>
