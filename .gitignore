@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules/
+
+# Optional Vitest coverage output
+coverage/
+
+# VS Code settings
+.vscode/
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db

@@ -1,11 +1,11 @@
 export default class GameSound {
   constructor() {
-    this.clickXAudio = new Audio("./src/assets/sounds/click-x.mp3");
-    this.clickOAudio = new Audio("./src/assets/sounds/click-o.mp3");
-    this.gameStartAudio = new Audio("./src/assets/sounds/game-start.mp3");
-    this.gameOverAudio = new Audio("./src/assets/sounds/game-over.mp3");
-    this.playAgainAudio = new Audio("./src/assets/sounds/play-again.mp3");
-    this.gameRestartAudio = new Audio("./src/assets/sounds/game-restart.mp3");
+    this.clickXAudio = new Audio('./src/assets/sounds/click-x.mp3');
+    this.clickOAudio = new Audio('./src/assets/sounds/click-o.mp3');
+    this.gameStartAudio = new Audio('./src/assets/sounds/game-start.mp3');
+    this.gameOverAudio = new Audio('./src/assets/sounds/game-over.mp3');
+    this.playAgainAudio = new Audio('./src/assets/sounds/play-again.mp3');
+    this.gameRestartAudio = new Audio('./src/assets/sounds/game-restart.mp3');
     this.softSounds();
   }
 

@@ -1,12 +1,12 @@
-import { GameUI } from "./GameUI.js";
+import { GameUI } from './GameUI.js';
 
 export default class GameLogic {
   constructor(handleInput, outputMsg, gameSound) {
     this.outputMsg = outputMsg;
     this.handleInput = handleInput;
-    this.gameSound = gameSound
+    this.gameSound = gameSound;
     this.gameUI = new GameUI();
-    this.cells = document.querySelectorAll(".cells");
+    this.cells = document.querySelectorAll('.cells');
     this.playGame = true;
     this.turnX = true;
     this.turnO = false;
@@ -31,9 +31,9 @@ export default class GameLogic {
 
     if (
       !this.playGame ||
-      !cell.classList.contains("cells") ||
-      cell.classList.contains("x") ||
-      cell.classList.contains("o")
+      !cell.classList.contains('cells') ||
+      cell.classList.contains('x') ||
+      cell.classList.contains('o')
     ) {
       return;
     }
@@ -41,22 +41,22 @@ export default class GameLogic {
     const cellIndex = element.indexOf(cell);
 
     if (this.turnX === true) {
-      cell.setAttribute("disabled", true);
-      cell.setAttribute("aria-label", "x")
-      this.gameSound.playClickXAudio()
-      cell.classList.add("x");
+      cell.setAttribute('disabled', true);
+      cell.setAttribute('aria-label', 'x');
+      this.gameSound.playClickXAudio();
+      cell.classList.add('x');
       this.playerXcombination.push(cellIndex);
-      this.checkWin("x");
+      this.checkWin('x');
       this.turnX = false;
       this.turnO = true;
       this.outputMsg.liveMsg(this.handleInput.playerTwoName);
     } else {
-      cell.setAttribute("disabled", true);
-      cell.setAttribute("aria-label", "o")
-      this.gameSound.playClickOAudio()
-      cell.classList.add("o");
+      cell.setAttribute('disabled', true);
+      cell.setAttribute('aria-label', 'o');
+      this.gameSound.playClickOAudio();
+      cell.classList.add('o');
       this.playerOcombination.push(cellIndex);
-      this.checkWin("o");
+      this.checkWin('o');
       this.turnO = false;
       this.turnX = true;
       this.outputMsg.liveMsg(this.handleInput.playerOneName);
@@ -65,12 +65,12 @@ export default class GameLogic {
 
   checkWin(player) {
     const currentCombination =
-      player === "x" ? this.playerXcombination : this.playerOcombination;
+      player === 'x' ? this.playerXcombination : this.playerOcombination;
 
     if (this.playerXcombination.length + this.playerOcombination.length === 9) {
       this.outputMsg.drawMsg();
-      this.gameUI.resultContainer.classList.remove("hidden");
-      this.gameSound.playGameOverAudio()
+      this.gameUI.resultContainer.classList.remove('hidden');
+      this.gameSound.playGameOverAudio();
       this.playGame = false;
       return;
     }
@@ -81,9 +81,9 @@ export default class GameLogic {
       );
 
       if (hasWon) {
-        this.gameUI.resultContainer.classList.remove("hidden");
-        this.gameSound.playGameOverAudio()
-        if (player === "x") {
+        this.gameUI.resultContainer.classList.remove('hidden');
+        this.gameSound.playGameOverAudio();
+        if (player === 'x') {
           this.outputMsg.resultMsg(
             this.handleInput.playerOneName,
             this.handleInput.playerTwoName
@@ -101,33 +101,33 @@ export default class GameLogic {
   }
 
   resetLogin() {
-    this.gameSound.PlayGameRestartAudio()
+    this.gameSound.PlayGameRestartAudio();
     this.playGame = true;
     this.turnX = true;
     this.turnO = false;
     this.playerXcombination = [];
     this.playerOcombination = [];
     this.cells.forEach((cell) => {
-      cell.classList.remove("x", "o");
-      cell.setAttribute("disabled", false)
+      cell.classList.remove('x', 'o');
+      cell.setAttribute('disabled', false);
     });
     this.outputMsg.clearMsg();
     this.handleInput.clearInput();
-    this.handleInput.formContainer.classList.remove("hidden");
-    this.gameUI.resultContainer.classList.add("hidden");
+    this.handleInput.formContainer.classList.remove('hidden');
+    this.gameUI.resultContainer.classList.add('hidden');
   }
 
   playAgainLogic() {
-    this.gameSound.playPlayAgainAudio()
+    this.gameSound.playPlayAgainAudio();
     this.playGame = true;
     this.turnX = true;
     this.turnO = false;
     this.playerXcombination = [];
     this.playerOcombination = [];
     this.cells.forEach((cell) => {
-      cell.classList.remove("x", "o");
-      cell.setAttribute("disabled", false)
+      cell.classList.remove('x', 'o');
+      cell.setAttribute('disabled', false);
     });
-    this.gameUI.resultContainer.classList.add("hidden");
+    this.gameUI.resultContainer.classList.add('hidden');
   }
 }

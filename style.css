@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 *,
 *::after,
 *::before {
@@ -10,7 +9,7 @@
   outline: none;
   border: none;
   color: #eeeeee;
-  font-family: "Montserrat", serif;
+  font-family: 'Montserrat', serif;
   font-weight: 300;
 }
 
@@ -30,8 +29,7 @@ h1 {
   text-align: center;
   font-size: 3rem;
   font-weight: 500;
-  margin-top: 5px ;
-
+  margin-top: 5px;
 }
 
 /* styling live feedback message and sound button */
@@ -85,7 +83,7 @@ header {
   grid-template-columns: repeat(3, 3fr);
   height: 540px;
   width: 600px;
-  background-color: #f0f8ff;
+  background-color: #fff;
   padding: 50px;
 }
 
@@ -97,6 +95,7 @@ header {
   justify-content: center;
   align-items: center;
   border: 2px solid #030637;
+  background-color: #fff;
   cursor: pointer;
   transition: all ease-in-out 0.4s;
 }
@@ -115,7 +114,7 @@ header {
 
 .x::after,
 .x::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 70%;
   border: 3.5px solid #030637;
@@ -131,7 +130,7 @@ header {
 }
 
 .o::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 60%;
   height: 70%;
@@ -268,10 +267,10 @@ input:valid {
   background: #eeeeeef2;
 }
 
-.game-over-box{
+.game-over-box {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -289,12 +288,10 @@ input:valid {
   gap: 20px;
 }
 
-
 .game-over-gif {
   background: transparent;
   height: 180px;
   width: 210px;
-  
 }
 
 #winMatch,
@@ -306,7 +303,7 @@ input:valid {
 }
 
 #winMatch::first-letter,
-#loseMatch::first-letter{
+#loseMatch::first-letter {
   text-transform: uppercase;
 }
 
@@ -328,7 +325,6 @@ input:valid {
 
 #playAgainGameBtn {
   background: #384b70;
-
 }
 
 #resetGameBtn {
@@ -341,48 +337,35 @@ input:valid {
   background: #507687;
 }
 
-
-
 .hidden {
   display: none;
 }
 
-
-
 @media (max-width: 766px) {
-
- 
-
   .name-form {
     width: 98%;
     height: 84%;
   }
 
-  .game-board{
+  .game-board {
     width: 90%;
     height: 55%;
     padding: 20px;
   }
 
-  .result-container{
+  .result-container {
     gap: 10px;
   }
 
   #winMatch,
-#loseMatch,
-.game-over {
-  font-size: 1.7rem;
-  font-weight: 600;
-
-}
+  #loseMatch,
+  .game-over {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
 
   .game-over-gif {
     height: 140px;
     width: 170px;
   }
-
-
-
 }
-
-
