@@ -109,7 +109,8 @@ export default class GameLogic {
     this.playerOcombination = [];
     this.cells.forEach((cell) => {
       cell.classList.remove('x', 'o');
-      cell.setAttribute('disabled', false);
+      cell.removeAttribute('disabled');
+      cell.removeAttribute('aria-label');
     });
     this.outputMsg.clearMsg();
     this.handleInput.clearInput();
@@ -126,7 +127,8 @@ export default class GameLogic {
     this.playerOcombination = [];
     this.cells.forEach((cell) => {
       cell.classList.remove('x', 'o');
-      cell.setAttribute('disabled', false);
+      cell.removeAttribute('disabled');
+      cell.removeAttribute('aria-label');
     });
     this.gameUI.resultContainer.classList.add('hidden');
   }

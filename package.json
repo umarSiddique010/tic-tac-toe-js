@@ -1,0 +1,34 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A modern, accessible, and fully tested two-player Tic Tac Toe game built with HTML, CSS, and vanilla JavaScript. Features include dynamic UI updates, sound effects, and modular architecture.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umarSiddique010/tic-tac-toe-js.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "javascript",
+    "vanilla-js",
+    "accessibility",
+    "testing",
+    "vitest",
+    "game",
+    "modular"
+  ],
+  "author": "Md Umar Siddique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umarSiddique010/tic-tac-toe-js/issues"
+  },
+  "homepage": "https://github.com/umarSiddique010/tic-tac-toe-js#readme",
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
+  }
+}
